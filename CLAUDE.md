@@ -49,6 +49,11 @@ Route params are bare slugs; Umbraco `route.path` values have leading and traili
 | `country` | `capital`, `description` (RichTextModel), `iso2Code`, `iso3Code` |
 | `year` | `population` |
 
+### External data sources
+
+- **Flags** — served from `https://flagcdn.com` using the country's `iso2Code` property (e.g. `flagcdn.com/w80/gb.webp`). No API key required.
+- **Population figures** — sourced from the [World Bank public API](https://data.worldbank.org) and stored as `year` content nodes in Umbraco. The site does not call the World Bank API at runtime.
+
 ### Caching and revalidation
 
 All Umbraco fetches are tagged with `"content"` and use `revalidate: 3600`. When Umbraco publishes content it POSTs to `/api/revalidate` with an HMAC-SHA256 signature verified against `UMBRACO_REVALIDATE_SECRET`.

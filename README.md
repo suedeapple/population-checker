@@ -138,6 +138,11 @@ Continents
 
 ---
 
+## External data sources
+
+- **Flags** — served from [flagcdn.com](https://flagcdn.com) using the country's `iso2Code` property. No API key required.
+- **Population figures** — sourced from the [World Bank public API](https://data.worldbank.org) and stored as `year` content nodes in Umbraco. The site does not call the World Bank API at runtime.
+
 ## Cache revalidation
 
 Next.js caches all Umbraco responses with the `content` tag. When content is published in Umbraco, it should POST to `/api/revalidate` with the header `x-revalidate-secret` matching `UMBRACO_REVALIDATE_SECRET`. This triggers an on-demand revalidation of all cached content.
