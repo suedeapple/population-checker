@@ -46,7 +46,7 @@ export default function PopulationChart({ data }: { data: DataPoint[] }) {
 							color: "#e8eeff",
 							fontSize: 13,
 						}}
-						formatter={(value: number) => [value.toLocaleString(), "Population"]}
+						formatter={(value) => [typeof value === "number" ? value.toLocaleString() : value, "Population"]}
 						labelStyle={{ color: "#8fa8cc", marginBottom: 4 }}
 						cursor={{ stroke: "rgba(255,255,255,0.15)" }}
 					/>
