@@ -49,7 +49,7 @@ export const getGetMedia20Url = (params?: GetMedia20Params,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://localhost:44341/umbraco/delivery/api/v2/media?${stringifiedParams}` : `https://localhost:44341/umbraco/delivery/api/v2/media`
+  return stringifiedParams.length > 0 ? `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/media?${stringifiedParams}` : `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/media`
 }
 
 export const getMedia20 = async (params?: GetMedia20Params, options?: RequestInit): Promise<getMedia20Response> => {
@@ -96,7 +96,7 @@ export const getGetMediaItemByPath20Url = (path: string,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://localhost:44341/umbraco/delivery/api/v2/media/item/${path}?${stringifiedParams}` : `https://localhost:44341/umbraco/delivery/api/v2/media/item/${path}`
+  return stringifiedParams.length > 0 ? `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/media/item/${path}?${stringifiedParams}` : `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/media/item/${path}`
 }
 
 export const getMediaItemByPath20 = async (path: string,
@@ -144,7 +144,7 @@ export const getGetMediaItemById20Url = (id: string,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://localhost:44341/umbraco/delivery/api/v2/media/item/${id}?${stringifiedParams}` : `https://localhost:44341/umbraco/delivery/api/v2/media/item/${id}`
+  return stringifiedParams.length > 0 ? `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/media/item/${id}?${stringifiedParams}` : `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/media/item/${id}`
 }
 
 export const getMediaItemById20 = async (id: string,
@@ -184,7 +184,7 @@ export const getGetMediaItems20Url = (params?: GetMediaItems20Params,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://localhost:44341/umbraco/delivery/api/v2/media/items?${stringifiedParams}` : `https://localhost:44341/umbraco/delivery/api/v2/media/items`
+  return stringifiedParams.length > 0 ? `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/media/items?${stringifiedParams}` : `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/media/items`
 }
 
 export const getMediaItems20 = async (params?: GetMediaItems20Params, options?: RequestInit): Promise<getMediaItems20Response> => {

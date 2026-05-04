@@ -66,7 +66,8 @@ All styles live in `src/styles/globals.scss`. Design tokens are CSS custom prope
 
 | Variable | Purpose |
 |---|---|
-| `NEXT_PUBLIC_UMBRACO_BASE_URL` | Umbraco base URL, no trailing slash |
+| `NEXT_PUBLIC_UMBRACO_BASE_URL` | Umbraco base URL, no trailing slash — used at runtime |
+| `MODEL_GENERATE_BASE_URL` | Local Umbraco base URL used only during `npm run generate` |
 | `UMBRACO_REVALIDATE_SECRET` | HMAC secret for the revalidation webhook |
 | `UMBRACO_REVALIDATE_ACCESS_CONTROL_ORIGIN` | CORS origin for the revalidation endpoint |
 | `NODE_TLS_REJECT_UNAUTHORIZED` | Set to `0` in `.env.local` for local dev with self-signed certs |

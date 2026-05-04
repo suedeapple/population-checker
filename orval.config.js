@@ -16,7 +16,7 @@ module.exports = {
 			},
 		},
 		input: {
-			target: `${process.env.NEXT_PUBLIC_UMBRACO_BASE_URL}/umbraco/swagger/delivery/swagger.json`,
+			target: `${process.env.MODEL_GENERATE_BASE_URL}/umbraco/swagger/delivery/swagger.json`,
 		},
 	},
 };

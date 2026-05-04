@@ -54,7 +54,7 @@ export const getGetContent20Url = (params?: GetContent20Params,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://localhost:44341/umbraco/delivery/api/v2/content?${stringifiedParams}` : `https://localhost:44341/umbraco/delivery/api/v2/content`
+  return stringifiedParams.length > 0 ? `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/content?${stringifiedParams}` : `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/content`
 }
 
 export const getContent20 = async (params?: GetContent20Params, options?: RequestInit): Promise<getContent20Response> => {
@@ -111,7 +111,7 @@ export const getGetContentItemByPath20Url = (path: string,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://localhost:44341/umbraco/delivery/api/v2/content/item/${path}?${stringifiedParams}` : `https://localhost:44341/umbraco/delivery/api/v2/content/item/${path}`
+  return stringifiedParams.length > 0 ? `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/content/item/${path}?${stringifiedParams}` : `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/content/item/${path}`
 }
 
 export const getContentItemByPath20 = async (path: string,
@@ -169,7 +169,7 @@ export const getGetContentItemById20Url = (id: string,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://localhost:44341/umbraco/delivery/api/v2/content/item/${id}?${stringifiedParams}` : `https://localhost:44341/umbraco/delivery/api/v2/content/item/${id}`
+  return stringifiedParams.length > 0 ? `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/content/item/${id}?${stringifiedParams}` : `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/content/item/${id}`
 }
 
 export const getContentItemById20 = async (id: string,
@@ -221,7 +221,7 @@ export const getGetContentItems20Url = (params?: GetContentItems20Params,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://localhost:44341/umbraco/delivery/api/v2/content/items?${stringifiedParams}` : `https://localhost:44341/umbraco/delivery/api/v2/content/items`
+  return stringifiedParams.length > 0 ? `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/content/items?${stringifiedParams}` : `https://world-population.suedeapple.co.uk/umbraco/delivery/api/v2/content/items`
 }
 
 export const getContentItems20 = async (params?: GetContentItems20Params, options?: RequestInit): Promise<getContentItems20Response> => {
