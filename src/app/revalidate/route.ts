@@ -31,7 +31,6 @@ export async function POST(request: NextRequest) {
 			JSON.parse(text) as RevalidatePayload;
 
 		if (isTrashed) {
-			// If the content is trashed, we want to revalidate the homepage and all tags to ensure it's removed from caches
 			revalidatePath("/", "layout");
 			revalidateTag("content", "max");
 			console.log("revalidated all cache");
@@ -40,6 +39,7 @@ export async function POST(request: NextRequest) {
 		if (contentPath) {
 			let url = removeLastSlash(contentPath);
 			if (url === "") url = "/";
+			revalidatePath("/", "layout");
 			revalidatePath(url);
 			revalidateTag("content", "max");
 			console.log(`revalidated content path ${url}`);
