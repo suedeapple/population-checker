@@ -108,7 +108,7 @@ export async function getYearsForCountry(
 	const response = await getContent20(
 		{
 			fetch: `children:${countryPath}`,
-            take: 30,
+            take: 999,
 			filter: ["contentType:year"],
 			sort: ["name:desc"],
 		},
