@@ -16,8 +16,8 @@ export const viewport = {
 
 export const metadata: Metadata = {
 	title: {
-		default: "World Population",
-		template: "%s | World Population",
+		default: "Population Checker",
+		template: "%s | Population Checker",
 	},
 	description: "Population data for countries around the world.",
 	icons: {

@@ -9,7 +9,7 @@ export default async function HomePage() {
 		continents.map(async (continent) => {
 			const slug = toSlug(continent.route.path);
 			const countries = await getCountriesForContinent(continent.route.path);
-			return { id: continent.id, name: continent.name, slug, countries };
+			return { id: continent.id!, name: continent.name!, slug, countries };
 		}),
 	);
 
