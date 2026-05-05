@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { getCountriesForContinent, getContinentPages } from "@/umbraco";
 import { toSlug } from "@/lib/utils";
-import CountryList from "@/components/CountryList";
+import HomeSearch from "@/components/HomeSearch";
 
 export default async function HomePage() {
 	const continents = await getContinentPages();
@@ -10,20 +9,9 @@ export default async function HomePage() {
 		continents.map(async (continent) => {
 			const slug = toSlug(continent.route.path);
 			const countries = await getCountriesForContinent(continent.route.path);
-			return { continent, slug, countries };
+			return { id: continent.id, name: continent.name, slug, countries };
 		}),
 	);
 
-	return (
-		<>
-			{continentData.map(({ continent, slug, countries }) => (
-				<section key={continent.id} className="continent-group">
-					<h2>
-						<Link href={`/${slug}`}>{continent.name}</Link>
-					</h2>
-					<CountryList countries={countries} continentSlug={slug} />
-				</section>
-			))}
-		</>
-	);
+	return <HomeSearch continents={continentData} />;
 }

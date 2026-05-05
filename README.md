@@ -2,7 +2,9 @@
 
 Historical population data browser powered by an Umbraco headless CMS backend.
 
-**Repository:** https://github.com/suedeapple/world-population.git
+**Live demo:** https://population-checker.vercel.app/  
+**Repository:** https://github.com/suedeapple/population-checker
+**API Repository:** https://github.com/suedeapple/population-checker-umbraco
 
 ---
 
@@ -88,7 +90,7 @@ npm run start
 ```
 src/
 ├── app/
-│   ├── page.tsx                        # Home — lists all continents and their countries
+│   ├── page.tsx                        # Home — fetches all continents/countries, passes to HomeSearch
 │   ├── [continent]/
 │   │   ├── page.tsx                    # Continent page
 │   │   └── [country]/
@@ -102,6 +104,7 @@ src/
 ├── components/
 │   ├── Header.tsx
 │   ├── Footer.tsx
+│   ├── HomeSearch.tsx                  # Client component — search input + filtered continent/country list
 │   ├── CountryList.tsx
 │   └── PopulationChart.tsx
 ├── umbraco/

@@ -35,6 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-y: scroll;
 }
 
 .site-content {
@@ -153,6 +154,54 @@ h1, h2 {
   strong {
     color: var(--color-text);
     font-weight: 600;
+  }
+}
+
+// Search bar
+.search-bar {
+  position: relative;
+  margin-bottom: var(--space-lg);
+
+  &__icon {
+    position: absolute;
+    left: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-secondary);
+    pointer-events: none;
+  }
+
+  &__input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md) var(--space-sm) 2.5rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: var(--color-text-secondary);
+    }
+
+    &:focus {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    // Remove default search input clear button in WebKit
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &__empty {
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: var(--space-xl) 0;
   }
 }
 

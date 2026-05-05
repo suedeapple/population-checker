@@ -30,6 +30,8 @@ Umbraco CMS → Delivery API → orval-generated client (src/api/) → umbraco/i
 
 **`src/lib/utils.ts`** exports `toSlug(path)` which strips leading/trailing slashes from Umbraco `route.path` values (e.g. `/europe/` → `europe`) for use in URLs and route param comparisons.
 
+**`src/components/HomeSearch.tsx`** is a `'use client'` component that owns the homepage search input and filtered rendering. `app/page.tsx` fetches all continent and country data server-side and passes the raw `CountryContentResponseModel[]` arrays down to it. Filtering happens entirely in the browser — typing narrows the country list within each continent section; continents with no matches are hidden. `CountryList` is reused for rendering the filtered results.
+
 ### URL structure
 
 ```
@@ -61,6 +63,8 @@ All Umbraco fetches are tagged with `"content"` and use `revalidate: 3600`. When
 ### Styling
 
 All styles live in `src/styles/globals.scss`. Design tokens are CSS custom properties in `:root`. The only Sass variable is `$bp-sm: 600px` — breakpoints must stay as Sass vars because CSS custom properties cannot be used in `@media` queries.
+
+`body` has `overflow-y: scroll` to keep the page width consistent between short and long pages (prevents layout shift when the scrollbar appears/disappears).
 
 ## Environment variables
 
