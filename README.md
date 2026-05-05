@@ -3,7 +3,9 @@
 Historical population data browser powered by an Umbraco headless CMS backend.
 
 **Live demo:** https://population-checker.vercel.app/  
+
 **Repository:** https://github.com/suedeapple/population-checker
+
 **API Repository:** https://github.com/suedeapple/population-checker-umbraco
 
 ---
