@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { getSettings } from "@/umbraco";
 
 export default async function Header() {
@@ -8,13 +9,7 @@ export default async function Header() {
 		<header className="site-header">
 			<div className="site-header__inner">
 				<Link href="/" className="site-header__logo">
-					<Image
-						src="/globe-logo.svg"
-						alt=""
-						width={40}
-						height={40}
-						className="site-header__logo-icon"
-					/>
+					<FontAwesomeIcon icon={faGlobe} className="site-header__logo-icon" />
 					{settings?.properties?.siteName ?? "World Population"}
 				</Link>
 			</div>
