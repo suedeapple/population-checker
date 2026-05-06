@@ -20,7 +20,7 @@ export default function CountryList({ countries, continentSlug }: Props) {
 						<Link href={`/${continentSlug}/${countrySlug}`} className="country-flag-link">
 							{iso2 && (
 								<Image
-									src={`https://flagcdn.com/w80/${iso2}.webp`}
+									src={`https://flagcdn.com/w160/${iso2}.webp`}
 									alt={`${country.name} flag`}
 									width={40}
 									height={25}
