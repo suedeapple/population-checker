@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../styles/reset.scss";
 import "../styles/globals.scss";
+
+config.autoAddCss = false;
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGlobe, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { getCountriesForContinent, getContinentPages } from "@/umbraco";
 import { toSlug } from "@/lib/utils";
 import { notFound } from "next/navigation";
@@ -46,7 +48,7 @@ export default async function ContinentPage({ params }: Props) {
 	return (
 		<>
 			<nav className="breadcrumb">
-				<Link href="/">Home</Link>
+				<Link href="/"><FontAwesomeIcon icon={faGlobe} /></Link>
 				{" / "}
 				<strong>{continentName}</strong>
 			</nav>

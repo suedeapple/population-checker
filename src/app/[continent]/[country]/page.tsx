@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowTrendUp, faArrowTrendDown, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { faArrowTrendUp, faArrowTrendDown, faMinus, faHouse, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { getCountriesForContinent, getContinentPages, getYearsForCountry } from "@/umbraco";
 import { toSlug } from "@/lib/utils";
 import type { CountryContentResponseModel, YearContentResponseModel } from "@/api/model";
@@ -63,7 +63,7 @@ export default async function CountryPage({ params }: Props) {
 	return (
 		<>
 			<nav className="breadcrumb">
-				<a href="/">Home</a>
+				<a href="/"><FontAwesomeIcon icon={faGlobe} /></a>
 				{" / "}
 				<a href={`/${continent}`}>{continentName}</a>
 				{" / "}
