@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { Analytics } from "@vercel/analytics/next";
 import "../styles/reset.scss";
 import "../styles/globals.scss";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
 				<Header />
 				<main className="page site-content">{children}</main>
 				<Footer />
+				<Analytics />
 			</body>
 		</html>
 	);
