@@ -27,6 +27,11 @@ export const metadata: Metadata = {
 	icons: {
 		icon: "/favicon.svg",
 	},
+	openGraph: {
+		title: "Population Checker",
+		description: "Population data for countries around the world.",
+		images: ["/og-image.webp"],
+	},
 };
 
 export default function RootLayout({
